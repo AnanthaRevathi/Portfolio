@@ -1,0 +1,80 @@
+.navbar{
+    background-color: var(--yellow-theme-nav-background-color);
+    height:80px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+
+    &__container{
+        display: flex;
+        align-items: center;
+        width:100%;
+        height:inherit;
+        padding: 0px 20px;
+
+    
+    &__logo{
+        color:var(--yellow-theme-main-colour);
+        cursor: pointer;
+    }
+    &__menu{
+        display: flex;
+        list-style: none;
+        text-align: center;
+        &__item{
+            line-height: 40px;
+            margin-right: 1.5rem;
+            font-size: 1.6rem;
+
+            &::after{
+                content:'';
+                display:block;
+                height:3px;
+                width:0;
+                background: transparent;
+                transition:all 0.5s ease;
+            }
+            &:hover::after{
+                width:100%;
+                background: var(--yellow-theme-main-color);
+            }
+            &__links{
+                color:var(--yellow-theme-main-color);
+                text-decoration: none;
+                padding: 0.5rem;
+            }
+        }
+    }
+}
+}
+@media only screen and (max-width: 760px) {
+    .navbar__container__menu {
+      display: flex;  // Hide menu by default on mobile
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      border-top: 1px solid #fff;
+      position: absolute;
+      top: 80px;
+      left: -110%;
+      background-color: var(--yellow-theme-nav-background-color);  // Ensure the background is visible
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+    .nav-icon {
+        display: none;
+    }
+    .active {
+      background: #181818; 
+      left:0px;
+      opacity:1; // Show menu when active class is present
+    }
+  
+    .nav-icon {
+      display: block;  // Show toggle icon on small screens
+      margin-right: 20px;  // Position it appropriately (right-aligned)
+        cursor: pointer;
+    }
+  }
+  

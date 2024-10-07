@@ -1,0 +1,60 @@
+.contact-form {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+    max-height: 600px;
+
+    h2 {
+        font-size: 3rem; // Heading size
+        color: var(--yellow-theme-main-color); // Theme color
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+
+        label {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 600; // Label size
+            color: #333; // Label color
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 3px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem; // Input size
+        }
+
+        textarea {
+            min-height: 100px; // Textarea height
+        }
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        background-color: #007bff; // Button color
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #0056b3; // Button hover color
+        }
+    }
+
+    .error {
+        color: red; // Error message color
+        text-align: center;
+        font-size: 1.2rem; // Error message size
+    }
+}

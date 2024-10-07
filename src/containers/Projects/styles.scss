@@ -1,0 +1,107 @@
+.projects {
+    padding: 2rem;
+    
+}
+
+.projects__content__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.projects__item {
+    
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: typingEffectAnimation 2.5s steps(30, end); // Apply typing animation effect
+    color: var(--yellow-theme-main-color); // Apply yellow theme color
+    font-size: 2rem; // Adjust font size similar to home.scss
+    line-height: 6rem; // Adjust line height
+}
+
+
+
+.error {
+    color: red;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__content {
+  
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.modal__content h2 {
+    margin-bottom: 1rem;
+    font-size: 1rem;  // Adjust to match home.scss heading styles
+    color: var(--yellow-theme-main-color); // Apply theme color to headings
+    line-height: 10rem;  // Adjust line height
+    animation: typingEffectAnimation 2.5s steps(30, end); // Add typing animation to modal titles
+}
+
+.modal__content button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal__content button:hover {
+    background-color: #0056b3;
+}
+
+@media only screen and (max-width: 550px) {
+    .projects__item {
+        font-size: 3rem;  // Adjust font size for smaller screens
+        line-height: 5rem; // Adjust line height
+    }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 768px) {
+    .projects__item {
+        font-size: 4rem;  // Font size for medium screens
+        line-height: 6rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+    .projects__item {
+        font-size: 6rem;  // Larger font size for wider screens
+        line-height: 8rem;
+    }
+}
+
+@keyframes typingEffectAnimation {
+    from {
+        width: 0%;  // Typing effect animation starts at 0%
+    }
+    to {
+        width: 100%;  // Ends at full width
+    }
+}
