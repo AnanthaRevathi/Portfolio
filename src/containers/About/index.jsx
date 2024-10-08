@@ -4,6 +4,8 @@ import {Animate} from "react-simple-animate";
 import {FaReact} from 'react-icons/fa'
 
 import {DiDatabase} from 'react-icons/di'
+import { VscGithub } from "react-icons/vsc";
+import { VscVscode } from "react-icons/vsc";
 import './styles.scss';
 const personalDetails=[
   {
@@ -83,6 +85,14 @@ end={{
 
 <div>
   <DiDatabase size={60} color= "var( --yellow-theme-main-color)"/>
+  
+</div>
+<div>
+  <VscGithub size={60} color= "var( --yellow-theme-main-color)"/>
+  
+</div>
+<div>
+  <VscVscode size={60} color= "var( --yellow-theme-main-color)"/>
   
 </div>
 </div>

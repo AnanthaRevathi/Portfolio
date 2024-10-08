@@ -26,10 +26,10 @@ const Contact= () => {
       return;
     }
 
-    // Reset error if all fields are filled
+    
     setError('');
     alert('Message sent successfully!');
-    // Handle form submission (e.g., send data to API or log it)
+   
     console.log('Form submitted:', formData);
     // Reset form
     setFormData({ name: '', email: '', message: '' });

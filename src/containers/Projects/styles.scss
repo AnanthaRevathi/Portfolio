@@ -6,13 +6,15 @@
 .projects__content__wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 3em;
+    line-height: 1rem;
     justify-content: center;
 }
 
 .projects__item {
-    
-    padding: 1rem;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 0;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -22,7 +24,7 @@
     animation: typingEffectAnimation 2.5s steps(30, end); // Apply typing animation effect
     color: var(--yellow-theme-main-color); // Apply yellow theme color
     font-size: 2rem; // Adjust font size similar to home.scss
-    line-height: 6rem; // Adjust line height
+    line-height: 3rem; // Adjust line height
 }
 
 

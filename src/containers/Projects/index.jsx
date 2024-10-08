@@ -11,7 +11,7 @@ const Projects = () => {
   // Function to fetch projects from the external JSON file
   const fetchProjects = async () => {
     try {
-      const response = await fetch('https://raw.githubusercontent.com/AnanthaRevathi/projects/refs/heads/main/projects.json');
+      const response = await fetch('https://raw.githubusercontent.com/AnanthaRevathi/Projectdetails/main/Projectdetails.json');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -65,10 +65,20 @@ const Projects = () => {
                   <>
                     <p>{project.description}</p>
                     <p>{project.details}</p>
-                    <button onClick={(event) => {
-                      event.stopPropagation(); // Prevent click event from bubbling up
-                      setSelectedProject(null); // Close the project details
-                    }}>
+                    {/* Add the GitHub link here */}
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View GitHub Project
+                    </a>
+                    <button
+                      onClick={(event) => {
+                        event.stopPropagation(); // Prevent click event from bubbling up
+                        setSelectedProject(null); // Close the project details
+                      }}
+                    >
                       Close
                     </button>
                   </>
